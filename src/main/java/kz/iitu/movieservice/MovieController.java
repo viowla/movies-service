@@ -27,7 +27,7 @@ public class MovieController {
         return userMovie;
     }
     @GetMapping("/detail/{id}")
-    public Movie getBookById(@PathVariable("id") String id) {
+    public Movie getMovieById(@PathVariable("id") String id) {
 
         return new Movie(id,  "Title", "Overview", "Genres");
     }

@@ -1,10 +1,7 @@
 package kz.iitu.movieservice;
 
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -12,6 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/movie/info")
+@CrossOrigin("*")
 public class MovieController {
 
     @GetMapping("/{userId}")

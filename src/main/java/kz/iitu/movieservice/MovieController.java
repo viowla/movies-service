@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -29,6 +30,18 @@ public class MovieController {
     public Movie getBookById(@PathVariable("id") String id) {
 
         return new Movie(id,  "Title", "Overview", "Genres");
+    }
+
+    @GetMapping("")
+    public List<Movie> getAllMovies(){
+        List<Movie> movieList = new ArrayList<>();
+        movieList.add(new Movie("1","title","overview","action"));
+        movieList.add(new Movie("1","title","overview","action"));
+        movieList.add(new Movie("1","title","overview","action"));
+        movieList.add(new Movie("1","title","overview","action"));
+        movieList.add(new Movie("1","title","overview","action"));
+        movieList.add(new Movie("1","title","overview","action"));
+        return movieList;
     }
 
 }

@@ -34,11 +34,11 @@ public class MovieController {
     public List<Movie> getAllMovies(){
         List<Movie> movieList = new ArrayList<>();
         movieList.add(new Movie("1","title","overview","action"));
-        movieList.add(new Movie("1","title","overview","action"));
-        movieList.add(new Movie("1","title","overview","action"));
-        movieList.add(new Movie("1","title","overview","action"));
-        movieList.add(new Movie("1","title","overview","action"));
-        movieList.add(new Movie("1","title","overview","action"));
+        movieList.add(new Movie("2","title 2","overview","action"));
+        movieList.add(new Movie("3","title 3","overview","action"));
+        movieList.add(new Movie("4","title 4","overview","action"));
+        movieList.add(new Movie("5","title 5","overview","action"));
+        movieList.add(new Movie("6","title 6","overview","action"));
         return movieList;
     }
 

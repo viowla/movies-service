@@ -24,8 +24,8 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter
             throws Exception
     {
         auth.inMemoryAuthentication()
-                .withUser("admin")
-                .password("admin")
+                .withUser("rest-client")
+                .password("{noop}p@ssword")
                 .roles("REST_CLIENT");
     }
 }

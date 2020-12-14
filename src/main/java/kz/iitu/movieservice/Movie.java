@@ -1,25 +1,35 @@
 package kz.iitu.movieservice;
 
+import kz.iitu.genresservice.Genre;
+import lombok.Data;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Getter
-@Setter
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
+@Entity
+@Table(name = "movie")
+@Data
+@NoArgsConstructor
 public class Movie {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
+
     private String title;
     private String overview;
-    private String genres;
 
-    public Movie() {
-    }
+    /*@OneToMany(mappedBy = "genre")
+    @JoinColumn(name = "genre_id", referencedColumnName = "id")
+    private List<Genre> genres;*/
 
-    public Movie(String id, String title, String overview, String genres) {
-        this.id = id;
-        this.title = title;
-        this.overview = overview;
-        this.genres = genres;
-    }
+
+
+    
 
 
 }

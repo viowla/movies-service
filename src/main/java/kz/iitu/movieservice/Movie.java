@@ -23,8 +23,10 @@ public class Movie {
     private String title;
     private String overview;
 
-    /*@OneToMany(mappedBy = "genre")
-    @JoinColumn(name = "genre_id", referencedColumnName = "id")
+    /*@ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(name = "movie_genre",
+            joinColumns = {@JoinColumn(name="movie_id", referencedColumnName = "id")},
+            inverseJoinColumns = {@JoinColumn(name="genre_id", referencedColumnName = "id")})
     private List<Genre> genres;*/
 
 
